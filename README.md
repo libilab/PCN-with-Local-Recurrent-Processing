@@ -15,3 +15,11 @@ Deep predictive coding network (PCN) v2 is a bi-directional and dynamical neural
 (a) The plain model (left) is a feedforward CNN with 3×3 convolutional connections (solid arrows) and 1×1 bypass connections (dashed arrows). 
 
 (b) On the basis of the plain model, the local PCN (right) uses additional feedback (solid arrows) and recurrent (circular arrows) connections. The PCN consists of a stack of basic building blocks. Each block runs multiple cycles of local recurrent processing between adjacent layers, and merges its input to its output through the bypass connections. The output from one block is then sent to its next block to initiate local recurrent processing in a higher block. It further continues until reaching the top of the network.
+
+## Usages
+
+## Results
+
+## Updates
+10/17/2018:
+    (1) readme file.
