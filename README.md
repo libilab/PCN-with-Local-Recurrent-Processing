@@ -21,9 +21,11 @@ Install Torch and required dependencies like cuDNN. See the instructions [here](
 
 Clone this repo: https://github.com/libilab/PCN_v2.git
 
+Prepare the ImageNet dataset. See the instructions [here](https://gluon-cv.mxnet.io/build/examples_datasets/imagenet.html) for a step-by-step guide
+
 As an example, the following command trains a PCN with default setting on ImageNet:
 ```bash
-python main.py
+python main.py --data /Path/to/ImageNet/Dataset/Folder
 ```
 
 ## Results
