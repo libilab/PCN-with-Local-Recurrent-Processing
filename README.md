@@ -22,4 +22,5 @@ Deep predictive coding network (PCN) v2 is a bi-directional and dynamical neural
 
 ## Updates
 10/17/2018:
+
     (1) readme file.
