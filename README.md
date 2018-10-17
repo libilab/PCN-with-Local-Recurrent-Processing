@@ -1,2 +1,2 @@
 # PCN_v2
-Code for "Deep predictive coding network with local recurrent processing for object recognition"
+Code for "Deep Predictive Coding Network with Local Recurrent Processing for Object Recognition"
