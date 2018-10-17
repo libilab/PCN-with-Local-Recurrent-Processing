@@ -6,6 +6,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import math
 
+# As in the paper, the first layer is a regular conv layer (to reduce memory consumption)
 class features2(nn.Module):
     def __init__(self, inchan, outchan, kernel_size=7, stride=2, padding=3, bias=False):
         super().__init__()
@@ -39,9 +40,6 @@ class PcConvRes(nn.Module):
 class PredNetResD(nn.Module):
     def __init__(self, num_classes=1000, cls=0, Tied = False):
         super().__init__()
-        # self.ics =     [    3,   64,   64,  128,  128,  128,  256,  256,  256,  256,  512,  512] # input chanels
-        # self.ocs =     [   64,   64,  128,  128,  128,  256,  256,  256,  256,  512,  512,  512] # output chanels
-        # self.maxpool = [False, True, True,False,False, True,False,False,False, True,False,False] # downsample flag
         self.ics =     [    3,   64,   64,  128,  128,  128,  128,  256,  256,  256,  512,  512] # input chanels
         self.ocs =     [   64,   64,  128,  128,  128,  128,  256,  256,  256,  512,  512,  512] # output chanels
         self.maxpool = [False,False, True,False, True,False, True,False,False, True,False,False] # downsample flag
