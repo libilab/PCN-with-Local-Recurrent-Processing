@@ -17,11 +17,9 @@ Deep predictive coding network (PCN) v2 is a bi-directional and dynamical neural
 (b) On the basis of the plain model, the local PCN (right) uses additional feedback (solid arrows) and recurrent (circular arrows) connections. The PCN consists of a stack of basic building blocks. Each block runs multiple cycles of local recurrent processing between adjacent layers, and merges its input to its output through the bypass connections. The output from one block is then sent to its next block to initiate local recurrent processing in a higher block. It further continues until reaching the top of the network.
 
 ## Usages
-Install Torch and required dependencies like cuDNN. See the instructions [here](https://github.com/facebook/fb.resnet.torch/blob/master/INSTALL.md) for a step-by-step guide.
 
-Clone this repo: https://github.com/libilab/PCN_v2.git
-
-Prepare the ImageNet dataset. See the instructions [here](https://gluon-cv.mxnet.io/build/examples_datasets/imagenet.html) for a step-by-step guide
+### To train PCN v2 on ImageNet
+For dependencies and the ImageNet dataset, see the instructions [here](https://github.com/pytorch/examples/tree/master/imagenet).
 
 As an example, the following command trains a PCN with default setting on ImageNet:
 ```bash
