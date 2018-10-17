@@ -147,7 +147,8 @@ def main():
         batch_size=args.batch_size, shuffle=False,
         num_workers=args.workers, pin_memory=True)
 
-    #10-crop validation dataloader
+    # 10-crop validation dataloader
+    # Reference:https://discuss.pytorch.org/t/how-to-properly-do-10-crop-testing-on-imagenet/11341
     val_loader_10 = torch.utils.data.DataLoader(
         datasets.ImageFolder(valdir, transforms.Compose([
             transforms.Resize(256),
@@ -360,6 +361,7 @@ def save_checkpoint(state, is_best, checkpointpath, filename='checkpoint.pth.tar
     if is_best:
         shutil.copyfile(checkpointpath+filename, checkpointpath+'model_best.pth.tar')
 
+# Reference: https://github.com/NVIDIA/apex/blob/master/apex/fp16_utils/loss_scaler.py
 # item() is a recent addition in pytorch 0.4.0, this function help code run both at pytorch 0.3 and pytorch 0.4 version
 def to_python_float(t):
     if hasattr(t, 'item'):
