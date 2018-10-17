@@ -26,14 +26,14 @@ class PcConvRes(nn.Module):
         self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,outchan,1,1))])
         self.relu = nn.ReLU(inplace=True)
         self.cls = cls
-        self.shortcut = nn.Conv2d(inchan, outchan, kernel_size=1, stride=1, bias=False)
+        self.bypass = nn.Conv2d(inchan, outchan, kernel_size=1, stride=1, bias=False)
 
     def forward(self, x):
         y = self.relu(self.FFconv(x))
         b0 = F.relu(self.b0[0]+1.0).expand_as(y)
         for _ in range(self.cls):
             y = self.FFconv(self.relu(x - self.FBconv(y)))*b0 + y
-        y = y + self.shortcut(x)
+        y = y + self.bypass(x)
         return y
 
 ''' Architecture PredNetResA '''
