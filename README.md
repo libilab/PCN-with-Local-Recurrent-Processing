@@ -23,7 +23,7 @@ For dependencies and the ImageNet dataset, see the instructions [here](https://g
 
 As an example, the following command trains a PCN with default setting on ImageNet:
 ```bash
-python main.py --data /Path/to/ImageNet/Dataset/Folder
+python main_imagenet.py --data /Path/to/ImageNet/Dataset/Folder
 ```
 
 ## Results
