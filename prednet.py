@@ -18,7 +18,7 @@ class features2(nn.Module):
         y = self.relu(self.featBN(self.conv(x)))
         return y
 
-class PcConvRes(nn.Module):
+class PcConvBp(nn.Module):
     def __init__(self, inchan, outchan, kernel_size=3, stride=1, padding=1, cls=0, bias=False):
         super().__init__()
         self.FFconv = nn.Conv2d(inchan, outchan, kernel_size, stride, padding, bias=bias)
@@ -50,9 +50,9 @@ class PredNetResE(nn.Module):
         # construct PC layers
         # Unlike PCN v1, we do not have a tied version here. We may or may not incorporate a tied version in the future.
         if Tied == False:
-            self.PcConvs = nn.ModuleList([PcConvRes(self.ics[i], self.ocs[i], cls=self.cls) for i in range(1, self.nlays)])
+            self.PcConvs = nn.ModuleList([PcConvBp(self.ics[i], self.ocs[i], cls=self.cls) for i in range(1, self.nlays)])
         else:
-            self.PcConvs = nn.ModuleList([PcConvResTied(self.ics[i], self.ocs[i], cls=self.cls) for i in range(1, self.nlays)])
+            self.PcConvs = nn.ModuleList([PcConvBpTied(self.ics[i], self.ocs[i], cls=self.cls) for i in range(1, self.nlays)])
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(1, self.nlays)])
         # Linear layer
         self.linear = nn.Linear(self.ocs[-1], num_classes)
