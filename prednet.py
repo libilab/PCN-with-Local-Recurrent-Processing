@@ -37,7 +37,7 @@ class PcConvRes(nn.Module):
         return y
 
 ''' Architecture PredNetResA '''
-class PredNetResD(nn.Module):
+class PredNetResE(nn.Module):
     def __init__(self, num_classes=1000, cls=0, Tied = False):
         super().__init__()
         self.ics =     [    3,   64,   64,  128,  128,  128,  128,  256,  256,  256,  512,  512] # input chanels
