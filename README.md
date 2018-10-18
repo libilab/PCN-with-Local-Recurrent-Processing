@@ -26,6 +26,13 @@ As an example, the following command trains a PCN with default setting on ImageN
 python main_imagenet.py --data /Path/to/ImageNet/Dataset/Folder
 ```
 
+### To train PCN with local recurrent processing on CIFAR
+
+As an example, the following command trains a PCN with default setting on CIFAR100:
+```bash
+python main_cifar.py
+```
+
 ## Results
 
 ## Updates
