@@ -41,4 +41,4 @@ python main_cifar.py
 (1) readme file.
 
 ## Contact
-For any questions and comments, please contact the authors.
+For any questions and comments, please [contact us](https://engineering.purdue.edu/libi/lab/Home.html). 
