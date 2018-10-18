@@ -39,3 +39,6 @@ python main_cifar.py
 10/17/2018:
 
 (1) readme file.
+
+## Contact
+For any questions and comments, please contact the authors.
