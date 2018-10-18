@@ -34,6 +34,8 @@ python main_cifar.py
 ```
 
 ## Results
+![Image of pcav1](https://github.com/libilab/PCN_v2/blob/master/figures/Figure_2.jpg)
+PCN shows better categorization performance given more cycles of recurrent processing, for CIFAR-10, CIFAR-100 and ImageNet. The red dash line represents the accuracy of the plain model.
 
 ## Updates
 10/17/2018:
