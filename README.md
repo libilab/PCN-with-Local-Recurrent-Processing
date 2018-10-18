@@ -1,5 +1,5 @@
-# PCN_v2
-This repository contains the code for PCN v2 introduced in the following paper:
+# PCN with Local Recurrent Processing
+This repository contains the code for PCN with local recurrent processing introduced in the following paper:
 
 [Deep Predictive Coding Network with Local Recurrent Processing for Object Recognition](https://arxiv.org/abs/1805.07526) (NIPS2018)
 
