@@ -18,7 +18,7 @@ Deep predictive coding network (PCN) with local recurrent processing is a bi-dir
 
 ## Usages
 
-### To train PCN v2 on ImageNet
+### To train PCN with local recurrent processing on ImageNet
 For dependencies and the ImageNet dataset, see the instructions [here](https://github.com/pytorch/examples/tree/master/imagenet).
 
 As an example, the following command trains a PCN with default setting on ImageNet:
