@@ -65,8 +65,8 @@ def main():
                                 world_size=args.world_size, rank=args.dist_rank)
 
     # Create model
-    model_name = 'PredNetResD'
-    models = {'PredNetResD':PredNetResD}
+    model_name = 'PredNetResE'
+    models = {'PredNetResE':PredNetResE}
     modelname = model_name+'_'+str(args.circles)+'CLS'
     print("=> creating model '{}'".format(modelname))
     model = models[model_name](num_classes=1000,cls=args.circles)
