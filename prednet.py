@@ -36,8 +36,8 @@ class PcConvBp(nn.Module):
         y = y + self.bypass(x)
         return y
 
-''' Architecture PredNetResA '''
-class PredNetResE(nn.Module):
+''' Architecture PredNetBpE '''
+class PredNetBpE(nn.Module):
     def __init__(self, num_classes=1000, cls=0, Tied = False):
         super().__init__()
         self.ics =     [    3,   64,   64,  128,  128,  128,  128,  256,  256,  256,  512,  512] # input chanels
