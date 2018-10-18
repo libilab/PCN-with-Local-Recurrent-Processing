@@ -48,7 +48,7 @@ class PredNetResE(nn.Module):
 
         self.baseconv = features2(self.ics[0], self.ocs[0])
         # construct PC layers
-        # Unlike PCN v1, we do not have a tied version here. We may incorporate a tied version in the future.
+        # Unlike PCN v1, we do not have a tied version here. We may or may not incorporate a tied version in the future.
         if Tied == False:
             self.PcConvs = nn.ModuleList([PcConvRes(self.ics[i], self.ocs[i], cls=self.cls) for i in range(1, self.nlays)])
         else:
