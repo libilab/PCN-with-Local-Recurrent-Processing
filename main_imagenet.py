@@ -53,7 +53,7 @@ parser.add_argument('--dist-backend', default='gloo', type=str,
 best_prec1 = 0
 
 
-def main():
+def main_imagenet():
     global args, best_prec1
     args = parser.parse_args()
 
@@ -411,4 +411,4 @@ def accuracy(output, target, topk=(1,)):
 
 
 if __name__ == '__main__':
-    main()
+    main_imagenet()
