@@ -5,7 +5,7 @@ This repository contains the code for PCN with local recurrent processing introd
 
 Kuan Han, Haiguang Wen, Yizhen Zhang, Di Fu, Eugenio Culurciello, Zhongming Liu
 
-The code is built on Pytorch
+The code is built on Pytorch.
 
 ## Introduction
 
